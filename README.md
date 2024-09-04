@@ -11,12 +11,12 @@ This project is a user management website featuring two key components: a Users 
     cd sapiens
     ```
 
-2. Copy the sample environment file to `.env.dev`:
+2. Copy the example environment to create environment-specific files based on `.env.example`:
     ```bash
-    cp .env.sample .env.dev
+    cp .env.example .env.dev  # for development
+    cp .env.example .env.test # for testing
+    cp .env.example .env.prod # for production
     ```
-
-3. Open the `.env.dev` file and update the values as needed for your local setup.
 
 ### Docker Setup
 
@@ -29,7 +29,9 @@ This project is a user management website featuring two key components: a Users 
    ```bash
    docker-compose -f docker-compose.dev.yml up --build
 
-2. **Build and run the Docker container for production:**
+#### Production
+
+1. **Build and run the Docker container for production:**
 
    To build and run the application in production mode, use the following command. This will use the `docker-compose.prod.yml` file to set up the production environment:
 
