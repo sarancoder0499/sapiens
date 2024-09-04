@@ -1,0 +1,27 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    ports:
+      - "80:80"
+    restart: unless-stopped
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile.prod
+    ports:
+      - "3000:3000"
+    # environment:
+      # MONGO_URI: mongodb://database:27017/prod_db
+    restart: unless-stopped
+  database:
+    image: mongo:4.0-xenial
+    ports:
+      - "27017:27017"
+    volumes:
+      - sapiens:/data/db
+    restart: unless-stopped
+
+volumes:
+  sapiens:
