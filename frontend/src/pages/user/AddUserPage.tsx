@@ -9,7 +9,11 @@ export default function AddUserPage() {
     <section className="border bg-white flex flex-col rounded w-[100%] lg:w-[70%] m-4 lg:m-0 ">
       <PageHeader>
         <PageTitle>Add New User</PageTitle>
-        <PageCTA label="Show User's" url={ROUTES.LISTUSER} />
+        <PageCTA
+          label="Show User's"
+          url={ROUTES.LISTUSER}
+          testId="cy-view-users"
+        />
       </PageHeader>
       <AddUserForm />
     </section>

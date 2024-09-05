@@ -11,7 +11,7 @@ This project is a user management website featuring two key components: a Users 
     cd sapiens
     ```
 
-2. Copy the example environment to create environment-specific files based on `.env.example`:
+2. Copy the example environment to create environment-specific files based on `.env.example` for both frontend and backend:
     ```bash
     cp .env.example .env.dev  # for development
     cp .env.example .env.test # for testing

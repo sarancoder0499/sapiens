@@ -105,7 +105,11 @@ export default function AddUserForm() {
               <FormItem className="w-full">
                 <FormLabel>First Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="John" {...field} />
+                  <Input
+                    placeholder="John"
+                    {...field}
+                    data-testid="cy-add-user-firstname"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -118,7 +122,11 @@ export default function AddUserForm() {
               <FormItem className="w-full">
                 <FormLabel>Last Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Brito" {...field} />
+                  <Input
+                    placeholder="Brito"
+                    {...field}
+                    data-testid="cy-add-user-lastname"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -132,7 +140,11 @@ export default function AddUserForm() {
               <FormItem className="w-full">
                 <FormLabel>Email Id</FormLabel>
                 <FormControl>
-                  <Input placeholder="john@gmail.com" {...field} />
+                  <Input
+                    placeholder="john@gmail.com"
+                    {...field}
+                    data-testid="cy-add-user-emailid"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -144,7 +156,11 @@ export default function AddUserForm() {
             </Button>
           )}
           {!loading && (
-            <Button type="submit" className="w-full">
+            <Button
+              type="submit"
+              className="w-full"
+              data-testid="cy-add-user-button"
+            >
               Add User
             </Button>
           )}

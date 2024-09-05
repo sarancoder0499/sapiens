@@ -40,7 +40,7 @@ export default function ListUserPage() {
         <PageTitle>
           Total Users: <span>{totalItems}</span>
         </PageTitle>
-        <PageCTA label="Add User" url={ROUTES.ADDUSER} />
+        <PageCTA label="Add User" url={ROUTES.ADDUSER} testId="cy-add-users" />
       </PageHeader>
       {loading && <ListLoader />}
       {totalItems > 0 && (

@@ -16,14 +16,10 @@ services:
     build: ./backend
     ports:
       - "3000:3000"
-    # environment:
-    #   MONGO_URI: mongodb://database:27017/local_db
     volumes:
       - ./backend:/app
   backend-tests:
     image: sapiens-backend
-    # environment:
-    #   MONGO_URI: mongodb://database:27017/test_db
     volumes:
       - ./backend:/app
     command: npm run test

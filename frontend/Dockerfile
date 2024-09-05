@@ -7,7 +7,6 @@ WORKDIR /app
 
 # Install dependencies
 COPY package*.json .
-RUN npm cache clean --force
 RUN npm install
 
 # Install Vite CLI globally
@@ -21,5 +20,3 @@ COPY --chown=app:app . .
 EXPOSE 5173
 
 CMD ["npm", "run", "dev"]
-
-CMD ["npm", "run", "cypress:open"]
