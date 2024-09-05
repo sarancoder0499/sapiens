@@ -11,7 +11,7 @@ RUN npm install
 # Install Nest CLI globally
 RUN npm install -g @nestjs/cli
 
-RUN chown -R app:app /app
+RUN chown -R app:app .
 
 USER app
 
