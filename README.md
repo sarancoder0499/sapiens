@@ -14,7 +14,6 @@ This project is a user management website featuring two key components: a Users 
 2. Copy the example environment to create environment-specific files based on `.env.example` for both frontend and backend:
     ```bash
     cp .env.example .env.dev  # for development
-    cp .env.example .env.test # for testing
     cp .env.example .env.prod # for production
     ```
 
@@ -27,7 +26,10 @@ This project is a user management website featuring two key components: a Users 
    To build and run the application in development mode, use the following command. This will use the `docker-compose.dev.yml` file to set up the development environment:
 
    ```bash
-   docker-compose -f docker-compose.dev.yml up --build
+   docker-compose -f docker-compose.dev.yml build --no-cache
+   docker-compose -f docker-compose.dev.yml up -d
+   docker-compose -f docker-compose.dev.yml logs
+   docker-compose -f docker-compose.dev.yml down
 
 #### Production
 
@@ -36,4 +38,7 @@ This project is a user management website featuring two key components: a Users 
    To build and run the application in production mode, use the following command. This will use the `docker-compose.prod.yml` file to set up the production environment:
 
    ```bash
-   docker-compose -f docker-compose.prod.yml up --build
+   docker-compose -f docker-compose.prod.yml build --no-cache
+   docker-compose -f docker-compose.prod.yml up -d
+   docker-compose -f docker-compose.prod.yml logs
+   docker-compose -f docker-compose.prod.yml down
